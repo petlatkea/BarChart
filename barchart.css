@@ -10,6 +10,18 @@
   background-color: orange;
   margin-right: 1px;
 
+  animation: move 1s linear infinite;
+
   /* TODO: Set height by JavaScript */
   height: 100%;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100%
+  {
+    transform: translateX(-100%);
+  }
 }

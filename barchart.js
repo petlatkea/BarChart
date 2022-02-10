@@ -7,12 +7,14 @@ const model = [8,12,32,4,13,24,23,22,1,0,30,7,3,6,3,19,24,29,14,16,3,1,9,8,30,12
 function init() {
   console.log("init");
   loop();
+  // add animation-listener (just to one of the bars)
+  document.querySelector(".bar").addEventListener("animationiteration", loop);
 }
 
 function loop() {
   modifyModel();
   displayData();
-  setTimeout(loop, 1000);
+  // setTimeout(loop, 1000); // <- use animation to loop rather than timeout!
 }
 
 function getNumberOfCustomers() {
